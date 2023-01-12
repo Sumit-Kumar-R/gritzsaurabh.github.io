@@ -248,7 +248,7 @@ footer{
 
 .top-cover-photos::before{
     content: "";
-    background-image: var(--background , url(/TOPCOVERPHOTOS/6.jpg));
+    background-image: var(--background , url(./TOPCOVERPHOTOS/6.jpg));
     position: absolute;
     height: 100%;
     width: 100%;
