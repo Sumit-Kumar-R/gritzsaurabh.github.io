@@ -145,7 +145,7 @@ function changeBackgroundPhotos(){
     }, 300);
     topCoverPhotos.style.setProperty('--opac', '.5')
     topCoverPhotos.style.setProperty('--transition', 'all 1s ease 0s')
-    topCoverPhotos.style.setProperty('--background', `url(/TOPCOVERPHOTOS/${photo}.jpg)`)
+    topCoverPhotos.style.setProperty('--background', `url(TOPCOVERPHOTOS/${photo}.jpg)`)
 }
 
 
