@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --organge : rgb(245,145,31);
+    --backgroundImage : url(/TOPCOVERPHOTOS/6.jpg);
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+/* ===================== HEADER ============================== */
+
+/*  -------------------------- TOP HEADER  --------------------------------- */
+.top-header{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    background: var(--organge);
+    color: white;
+    align-items: center;
+    column-gap: 720px;
+}
+
+.top-header-left{
+    display: flex;
+    column-gap: 11px;
+}
+
+.top-header-left a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    /* border: 2px solid black; */
+}
+
+.top-header-left p{
+    display: inline;
+}
+
+.top-header-left a:hover{
+    color: black;
+   
+}
+
+/* .top-header-left a:hover i{
+    transform: rotate(-180deg);
+} */
+
+.top-header-right{
+    display: flex;
+    column-gap: 5px;
+}
+
+.top-header-right i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 14px;
+}
+
+.top-header-right i:hover{
+    background: #17a2b8;
+    border-radius: 12%;
+    transition: all .3s ease;
+}
+
+/* ------------------------------ BOTTOM HEADER ------------------------------------------- */
+
+
+
+header{
+    position: sticky;
+    top: -40px;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background: rgb(205,203,203);
+    /* background: yellow; */
+    justify-content: space-around;
+    /* z-index: 1000; */
+    height: 90px;
+}
+
+.nav-left img{
+    /* height: 90px; */
+    width: 172.92px;
+}
+
+/* % height and width no working in bottom header */
+/* =============== products becomes invisible when I remove height  ========================== */
+.nav-right{
+    display: flex;
+    column-gap: 2.0rem;
+    height: 100%;
+    /* height: 90px; */
+    align-items: center;
+    position: relative;
+    /* top: 40px; */
+}
+
+.nav-right a{
+    text-decoration: none;
+    height: 85%;
+    display: flex;
+    color: black;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-right a::before{
+    content: "";
+    background: #f9a305;
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-right .active::before{
+    content: "";
+    background: #f9a305;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-right .active{
+    color: var(--organge);
+}
+.nav-right a:hover:before{
+    content: "";
+    background: #f9a305;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.nav-right a:hover{
+    transition: all 0.5s ease-in-out 0s;
+    color: var(--organge);
+    /* transform: rotate(270deg); */
+}
+
+.dorpdown-icon-rotate, .dorpdown-icon2-rotate{
+    margin-left: 4px;
+}
+
+.nav-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* height: 100%; */
+    /* height: 500px; */
+}
+
+.nav-products:hover{
+    overflow: visible;
+}
+
+.nav-products-div1{
+    display: flex;
+    position: relative;
+    top: 30px;
+}
+
+.nav-products-div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 120%;
+    left: 0px;
+    background-color: white;
+    color: black;
+    /* border: 2px solid black; */
+    font-size: 14px;
+    width: 320px;
+    height: 315px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.nav-products:hover .nav-products-div2{
+    /* background-color: yellow; */
+    top: 100%;
+    transition: all .5s ease-in-out 0s;
+    opacity: 1;
+}
+
+.nav-products-div2 p{
+    position: relative;
+    left: 10px;
+}
+
+/* ============== take-us-to-top ================= */
+
+.take-us-to-top{
+    position: fixed;
+    right: 50px;
+    bottom: -40px;
+    background: var(--organge);
+    height: 40px;
+    width: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+footer{
+    height: 500px;
+    background-color: lightgray;
+}
+
+/* ============================== MAIN SECTION STARTED ============================================ */
+
+.top-cover-photos{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+}
+
+.top-cover-photos::before{
+    content: "";
+    background-image: var(--background , url(/TOPCOVERPHOTOS/6.jpg));
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: var(--opac, 1);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: var(--transition , none);
+}
+
+.top-cover-photos > span{
+    align-self: center;
+}
+
+.top-cover-photos > span{
+    background: yellow;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--organge);
+}
+
+.top-cover-photos > div{
+    align-self: center;
+    background: #12162866;
+    height: 58%;
+    width: 48%;
+    color: white;
+    
+}
+
+.animated-box{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* overflow: hidden; */
+}
+
+.animated-box2{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.animated-box3{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.animated-box-p{
+    position: relative;
+    top: 0px;
+    left: 55px;
+    /* opacity: .5; */
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 15px;
+}
+
+.animated-box-heading{
+    position: relative;
+    font-size: 60px;
+    left: 55px;
+}
+
+.animated-box-heading span{
+    color: var(--organge);
+}
+
+.animated-box-p2{
+    font-size: 16px;
+    position: relative;
+    left: 55px;
+}
+
+.animation-para2{
+    animation-name: para;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-timing-function: all 2s ease-in-out 0s;
+}
+
+@keyframes para {
+    0% {
+        letter-spacing: 0px;
+    }
+    
+    50% {
+        letter-spacing: 1px;
+    }
+    100% {
+        letter-spacing: 0px;
+    }
+}
+
+
+.two-buttons{
+    position: relative;
+    left: 55px;
+}
+
+
+.box-btn1 , .box-btn2{
+    height: 50px;
+    width: 170px;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 20px;
+    position: relative;
+}
+
+.box-btn1{
+    background-color: var(--organge);
+    border: transparent;
+}
+
+.box-btn2{
+    border: 1px solid var(--organge);
+    background: transparent;
+}
+
+.box-btn-transition{
+    top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
